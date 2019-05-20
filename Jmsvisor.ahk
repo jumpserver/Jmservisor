@@ -2,14 +2,14 @@ if(A_Args[1]=1){
     Run,%2%
     WinActivate, ahk_exe chrome.exe
     BlockInput,on
-    Sleep, %3%
+    Sleep, 10000
     SetKeyDelay, 30
     Send, {Tab}
     Sleep, 100
-    Send, %4%;用户名
+    Send, %4% ;用户名
     Send, {Tab}
     sleep, 100
-    Send, %5%;密码
+    Send, %5% ;密码
     Send, {Tab}
     Send, {Enter}
 
