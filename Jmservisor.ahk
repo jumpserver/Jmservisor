@@ -1,5 +1,5 @@
-if(A_Args[1]=1){
-    Run,%2%
+if(A_Args[1]="chrome"){
+    Run,%2% --app=%3% --start-maximized
     WinActivate, ahk_exe chrome.exe
     BlockInput,on
     Sleep, 10000
@@ -12,11 +12,10 @@ if(A_Args[1]=1){
     Send, %5% ;密码
     Send, {Tab}
     Send, {Enter}
-
     BlockInput,off
     return
 }
-if(A_Args[1]=2){
+if(A_Args[1]="mysqlworkbench"){
   Run, %2%
   WinActivate, ahk_exe MySQLWorkbench.exe
   BlockInput,on
