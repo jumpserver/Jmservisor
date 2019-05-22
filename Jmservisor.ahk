@@ -15,7 +15,7 @@ if(A_Args[1]="chrome"){
     BlockInput,off
     return
 }
-if(A_Args[1]="mysqlworkbench"){
+if(A_Args[1]="mysql_workbench"){
   Run, %2%
   WinActivate, ahk_exe MySQLWorkbench.exe
   BlockInput,on
