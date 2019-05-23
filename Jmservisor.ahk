@@ -15,6 +15,7 @@ if(A_Args[1]="chrome"){
     BlockInput,off
     return
 }
+
 if(A_Args[1]="mysql_workbench"){
   Run, %2%
   WinActivate, ahk_exe MySQLWorkbench.exe
@@ -56,4 +57,28 @@ if(A_Args[1]="mysql_workbench"){
   return
 }
 
+if(A_Args[1]="sphere_client"){
+    Run,%2%
+    WinActivate, ahk_exe VpxClient.exe
+    BlockInput,on
+    Sleep, 10000
+    SetKeyDelay, 30
+    ; 第二次登录 有IP记录情况
+    Send, {Tab}
+    Send, {Tab}
+    Send, {Tab}
+    Send, {Tab}
+    Send, {Tab}
+    Send, %3% ;IP
+    Send, {Tab}
+    Sleep, 100
+    Send, %4% ;用户名
+    Send, {Tab}
+    sleep, 100
+    Send, %5% ;密码
+
+    Send, {Enter}
+    BlockInput,off
+    return
+}
 return
