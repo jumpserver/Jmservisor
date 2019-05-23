@@ -57,7 +57,7 @@ if(A_Args[1]="mysql_workbench"){
   return
 }
 
-if(A_Args[1]="sphere_client"){
+if(A_Args[1]="vmware_client"){
     Run,%2%
     WinActivate, ahk_exe VpxClient.exe
     BlockInput,on
