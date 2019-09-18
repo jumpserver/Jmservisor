@@ -4,7 +4,9 @@
 
 Jmservisor 是配合Jumpserver使用的拉起 Windows Server RemoteApp 功能使用的客户端
 
+### 注意事项
 
+* 需要让Jmservisor接受所有参数
 
 ### 参考文档
 
