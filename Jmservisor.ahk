@@ -81,4 +81,19 @@ if(A_Args[1]="vmware_client"){
     BlockInput,off
     return
 }
+if(A_Args[1]="custom"){
+	if(!FileExist(A_Args[2]) or InStr(FileExist(A_Args[2]),"D")){
+		return
+	}
+	params := ""
+	if(A_Args.length() > 2){
+		for index,param in A_Args{
+			if(index > 2){
+				params := params " " param
+			}
+		}
+	}
+	Run,%2% %params%
+	return
+}
 return
