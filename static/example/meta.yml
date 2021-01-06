@@ -1,0 +1,35 @@
+info:
+  app_name: chrome
+  app_display: Chrome
+  description: 浏览器 Chrome，可以通过 Remote App 访问某个特定网址
+  author: 老广
+  company: FIT2CLOUD
+  license: MIT
+  min_jumpserver_version: 2.6
+  tags:
+    - system
+    - browser
+    - 浏览器
+  dependencies: []
+
+params:
+  - name: url
+    display: "{{ 'URL' | i18n }}"
+    type: string
+    default: http://www.jumpserver.org
+    required: false
+    placeholder: "{{ 'URL' | i18n }}"
+    help_text: "{{ 'URL chrome to open' | i18n }}"
+
+  - name: username
+    display: "{{ 'Username' | i18n }}"
+    type: string
+    required: false
+    placeholder: "{{ 'Username' | i18n }}"
+    help_text: "{{ 'Username for login' | i18n }}"
+
+  - name: password
+    display: "{{ 'Password' | i18n }}"
+    type: password
+    required: false
+    placeholder: "{{ 'Password' | i18n }}"
