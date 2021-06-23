@@ -9,7 +9,7 @@ if(A_Args[1]="chrome"){
     Send, %4% ;用户名
     Send, {Tab}
     sleep, 100
-    Send, %5% ;密码
+    SendRaw, %5% ;密码
     Send, {Tab}
     Send, {Enter}
     BlockInput,off
@@ -43,7 +43,7 @@ if(A_Args[1]="mysql_workbench"){
 
   sleep, 100
   Send, {Tab}
-  Send, {Enter} ;输入密码
+  SendRaw, {Enter} ;输入密码
   Send, %6%
   Send, {Enter}
 
@@ -75,7 +75,7 @@ if(A_Args[1]="vmware_client"){
     Send, %4% ;用户名
     Send, {Tab}
     sleep, 100
-    Send, %5% ;密码
+    SendRaw, %5% ;密码
 
     Send, {Enter}
     BlockInput,off
