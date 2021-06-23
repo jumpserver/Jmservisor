@@ -7,10 +7,13 @@ if(A_Args[1]="chrome"){
     Send, {Tab}
     Sleep, 100
     Send, %4% ;用户名
+    Sleep, 100
     Send, {Tab}
-    sleep, 100
+    Sleep, 100
     SendRaw, %5% ;密码
+    Sleep, 100
     Send, {Tab}
+    Sleep, 100
     Send, {Enter}
     BlockInput,off
     return
@@ -27,27 +30,27 @@ if(A_Args[1]="mysql_workbench"){
   Send, {Tab} ;跳过连接选型选项
   Send, {Tab} ;跳过Tag选项
 
-  sleep, 100
+  Sleep, 100
   Send, ^a ;输入IP
   Send, %3%
 
-  sleep, 100
+  Sleep, 100
   Send, {Tab}
   Send, ^a ;输入端口
   Send,%4%
 
-  sleep, 100
+  Sleep, 100
   Send, {Tab}
   Send, ^a ;输入用户名
   Send, %5%
 
-  sleep, 100
+  Sleep, 100
   Send, {Tab}
   SendRaw, {Enter} ;输入密码
   Send, %6%
   Send, {Enter}
 
-  sleep, 100
+  Sleep, 100
   Send, {Tab} 
   Send, {Tab} 
   Send, {Tab} 
@@ -74,7 +77,7 @@ if(A_Args[1]="vmware_client"){
     Sleep, 100
     Send, %4% ;用户名
     Send, {Tab}
-    sleep, 100
+    Sleep, 100
     SendRaw, %5% ;密码
 
     Send, {Enter}
