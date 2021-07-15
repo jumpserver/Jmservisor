@@ -3,17 +3,17 @@ if(A_Args[1]="chrome"){
     WinActivate, ahk_exe chrome.exe
     BlockInput,on
     Sleep, 10000
-    SetKeyDelay, 30
+    SetKeyDelay, 100
     Send, {Tab}
-    Sleep, 100
+    Sleep, 300
     Send, %4% ;用户名
-    Sleep, 100
+    Sleep, 300
     Send, {Tab}
-    Sleep, 100
+    Sleep, 300
     SendRaw, %5% ;密码
-    Sleep, 100
+    Sleep, 300
     Send, {Tab}
-    Sleep, 100
+    Sleep, 300
     Send, {Enter}
     BlockInput,off
     return
@@ -24,38 +24,41 @@ if(A_Args[1]="mysql_workbench"){
   WinActivate, ahk_exe MySQLWorkbench.exe
   BlockInput,on
   Sleep, 10000
-  SetKeyDelay, 30
+  SetKeyDelay, 100
   Send , ^u
   Send, {Tab} ;跳过保存连接选项
   Send, {Tab} ;跳过连接选型选项
   Send, {Tab} ;跳过Tag选项
-
-  Sleep, 100
-  Send, ^a ;输入IP
-  Send, %3%
-
-  Sleep, 100
+  Sleep, 300
+  Send, ^a
+  Send, {Delete}
+  Send, %3% ;IP
+  Sleep, 300
   Send, {Tab}
-  Send, ^a ;输入端口
-  Send,%4%
-
-  Sleep, 100
+  Send, ^a
+  Send, {Delete}
+  Send, %4% ;端口
+  Sleep, 300
   Send, {Tab}
-  Send, ^a ;输入用户名
-  Send, %5%
-
-  Sleep, 100
+  Send, ^a
+  Send, {Delete}
+  Send, %6% ;用户名
+  Sleep, 300
   Send, {Tab}
-  SendRaw, {Enter} ;输入密码
-  Send, %6%
   Send, {Enter}
-
-  Sleep, 100
-  Send, {Tab} 
-  Send, {Tab} 
-  Send, {Tab} 
-  Send, {Tab} 
-  Send, {Enter} ;确定
+  Sleep, 300
+  SendRaw, %7% ;密码
+  Sleep, 300
+  Send, {Enter}
+  Sleep, 300
+  Send, {Tab}
+  Send, {Tab}
+  Send, ^a
+  Send, {Delete}
+  Sleep, 300
+  Send, %5% ;默认数据库
+  Sleep, 300
+  Send, {Enter}
   BlockInput,off
   return
 }
@@ -65,7 +68,7 @@ if(A_Args[1]="vmware_client"){
     WinActivate, ahk_exe VpxClient.exe
     BlockInput,on
     Sleep, 10000
-    SetKeyDelay, 30
+    SetKeyDelay, 100
     ; 第二次登录 有IP记录情况
     Send, {Tab}
     Send, {Tab}
@@ -74,12 +77,11 @@ if(A_Args[1]="vmware_client"){
     Send, {Tab}
     Send, %3% ;IP
     Send, {Tab}
-    Sleep, 100
+    Sleep, 300
     Send, %4% ;用户名
     Send, {Tab}
-    Sleep, 100
+    Sleep, 300
     SendRaw, %5% ;密码
-
     Send, {Enter}
     BlockInput,off
     return
