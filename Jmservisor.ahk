@@ -75,13 +75,17 @@ if(A_Args[1]="vmware_client"){
     Send, {Tab}
     Send, {Tab}
     Send, {Tab}
+    Sleep, 300
     Send, %3% ;IP
+    Sleep, 300
     Send, {Tab}
     Sleep, 300
     Send, %4% ;用户名
+    Sleep, 300
     Send, {Tab}
     Sleep, 300
     SendRaw, %5% ;密码
+    Sleep, 300
     Send, {Enter}
     BlockInput,off
     return
