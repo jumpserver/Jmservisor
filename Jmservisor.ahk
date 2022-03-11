@@ -13,7 +13,7 @@ if(A_Args[1] = "-"){
 
 
 if(A_Args[1]="chrome"){
-    Run,%2% --app=%3% --start-maximizedc
+    Run,%2% --app=%3% --start-maximized
     WinActivate, ahk_exe chrome.exe
     BlockInput,on
     Sleep, 10000
