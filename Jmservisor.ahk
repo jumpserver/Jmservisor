@@ -1,5 +1,19 @@
+
+if(A_Args[1] = "-"){
+    text := ""
+    VarSetCapacity(text, 4096)
+    DllCall(".\rail_decrypt\decrypt_w","Str", A_Args[2], "Str", text)
+    if (ErrorLevel != 0){
+        MsgBox % "ErrorLevel" ErrorLevel
+    }
+
+    Run,jmservisor %text%
+    return
+}
+
+
 if(A_Args[1]="chrome"){
-    Run,%2% --app=%3% --start-maximized
+    Run,%2% --app=%3% --start-maximizedc
     WinActivate, ahk_exe chrome.exe
     BlockInput,on
     Sleep, 10000
@@ -77,7 +91,6 @@ if(A_Args[1]="vmware_client"){
     Send, {Tab}
     Sleep, 300
     Send, %3% ;IP
-    Sleep, 300
     Send, {Tab}
     Sleep, 300
     Send, %4% ;用户名
